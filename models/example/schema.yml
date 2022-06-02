@@ -1,0 +1,32 @@
+
+version: 2
+
+models:
+  - name: monthly_Avg_m1_1
+    description: "Calculate Monthly average NAV, Repurchase & Sale Price for each scheme"
+    columns:
+      - name: code
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+      - name: nav_month
+        description: "month for the particular nav value"
+        tests:
+          - unique
+          - not_null
+      - name: avg_nav
+        description: "average of the nav"
+        tests:
+          - unique
+          - not_null
+
+
+  - name: max_min_nav_m1_2
+    description: "Find out each scheme’s Max and Min NAV value and Date it occurred"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
